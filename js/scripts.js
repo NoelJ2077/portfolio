@@ -32,3 +32,6 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+/* start Custom Javascript */
+
+/* end Custom Javascript */

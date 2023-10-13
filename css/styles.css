@@ -14,6 +14,62 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ /* Custom Setting */
+#last-edit{
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.java-logo {
+  background-image: url(java-logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+.about {
+  background-image: url(ProfilSki.jpg);
+}
+.ausbildung {
+  background-image: url(SitiaWald.png);
+}
+.arbeitserfahrung {
+  background-image: url(SitiaBoat.jpg);
+}
+.skills {
+  background-image: url(Fluss.png);
+}
+.interessen {
+  background-image: url(codeNight.gif);
+}
+.resume-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-background-mark {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 5px;
+  padding: 4px;
+  border-radius: 10px;
+  display: inline-block;
+  backdrop-filter: blur(5px);
+}
+.about, .ausbildung, .arbeitserfahrung, .skills, .interessen {
+  box-shadow: 0 0 10px 5px rgba(54, 52, 52, 0.8);
+  /* Alternative to blur */
+}
+
+/* End Custom Setting */
+
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -82,24 +138,6 @@
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
-/* Custom Setting */
-#last-edit{
-  position: absolute;
-  bottom: 0;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.java-logo {
-  background-image: url(java-logo.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-}
-
-/* End Custom Setting */
 *,
 *::before,
 *::after {
@@ -615,6 +653,7 @@ progress {
   margin-bottom: 1rem;
   font-size: 0.875em;
   color: #6c757d;
+
 }
 .blockquote-footer::before {
   content: "— ";
@@ -10849,7 +10888,8 @@ textarea.form-control-lg {
 }
 body {
   padding-top: 3.375rem;
-  color: #6c757d;
+  /* color: #6c757d; */
+  color: #000;
 }
 
 @media (min-width: 992px) {

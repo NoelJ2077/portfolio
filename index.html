@@ -14,15 +14,15 @@
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-    
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet"/>
+        <!-- class: text-background-mark ist der weisse hintergrund mit opazität 0.8! -->
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Noël Jörg</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/njLogo.ico" alt="..." /></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -32,24 +32,33 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#arbeitserfahrung">Arbeitserfahrung</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interessen">Interessen</a></li>
-                    <div id="last-edit"><li class="nav-items"><a class="nav-link js-scroll-trigger">Aktualisiert: 7 Oktober 2023</a></li></div>
+                    <!-- Der Letzte Stand der Webseite steht immer unten links in NAV Bereich (oranger Bereich) -->
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger"><div id="last-edit">Stand: 13 Oktober 2023</div></a></li>
                 </ul>    
             </div>
         </nav>
         <!-- Page Content-->
         <div class="container-fluid p-0">
             <!-- About-->
-            <section class="resume-section" id="about">
+            <section class="resume-section about" id="about"><!-- Picture in CSS -->
                 <div class="resume-section-content">
                     <h1 class="mb-0">
-                        Noël
-                        <span class="text-primary">Jörg</span>
+                        <span class="text-background-mark">Noël</span><!-- Lesbarkeit erhöhen -->
+                        <span class="text-background-mark text-primary">Jörg</span><!-- Lesbarkeit erhöhen -->
                     </h1>
                     <div class="subheading mb-5">
-                        8916 Jonen AG · 079 480 91 52 · 
-                        <a href="mailto:name@email.com">noel.joerg@outlook.com</a>
+                        <span class="text-background-mark">8916 Jonen AG · 079 480 91 52 ·</span><!-- Lesbarkeit erhöhen -->
+                        <a class="text-background-mark" href="mailto:name@email.com">noel.joerg@outlook.com</a><!-- Lesbarkeit erhöhen -->
                     </div>
-                    <p class="lead mb-5">Zurzeit besuche ich die Bénédict Schule in Altstetten wo ich im 2 Lehrjahr für Applikationsenwicklung EFZ bin.</p>
+                    <p class="lead mb-5">
+                        <span class="text-background-mark">
+                            Hallo, und Willkommen auf meiner Webseite. Ich bin aktuell in der Lehre zum Applikationsentwickler EFZ bei der Bénédict Schule in Altstetten. /* Mehr Text */
+                        </span>
+                    </p>
+                    <p class="lead mb-5">
+                        <span class="text-background-mark">
+                            In meiner Freizeit lese ich viel übers Weltgeschehen oder gehe mit Freunden raus. Im Winter fahre ich gerne Ski und im Sommer gehe ich gerne Schwimmen. /*  lorem ipsum asd fnionwf oifn weionf osidnf oisn fionsioe fnsonf oif nsieonf isenf wejhfb  wui ebfw efkjw uio fwef we f */
+                        </span>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/no%C3%ABl-j%C3%B6rg-618909209/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/NoelJ2077/" target="_blank"><i class="fab fa-github"></i></a>
@@ -58,108 +67,175 @@
             </section>
             <hr class="m-0" />
             <!-- Ausbildung-->
-            <section class="resume-section" id="ausbildung">
+            <section class="resume-section ausbildung" id="ausbildung">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Ausbildung</h2>
+                    <h2 class="mb-5">
+                        <span class="text-background-mark">Ausbildung</span><!-- Lesbarkeit erhöhen -->
+                    </h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Informatiker, Fachrichtung Applikationsentwickler EFZ</h3>
-                            <div class="subheading mb-3">Bénédict Schule Zürich Altstetten</div>
-                            <p>Aktuell bin ich in der Ausbildung zum Applikationsentwickler. Die Lehre dauert 4 Jahre und ist sehr Anspruchsvoll. Schwerpunkte sind Objekt orientiertes Programmieren sowie die Schnittstellen zwischen Datenbanken und Programmen. Ich werde meinen Lehrabschluss voraussichtlich im Sommer 2026 erhalten.</p>
+                            <h3 class="mb-0">
+                                <span class="text-background-mark">Informatiker, Fachrichtung Applikationsentwickler EFZ</span><!-- Lesbarkeit erhöhen -->
+                            </h3>
+                            <div class="subheading mb-3">
+                                <span class="text-background-mark">Schule Zürich Altstetten</span><!-- Lesbarkeit erhöhen -->
+                            </div>
+                            <p>
+                                <span class="text-background-mark">
+                                Aktuell bin ich in der Ausbildung zum Applikationsentwickler. Die Lehre dauert 4 Jahre und ist sehr Anspruchsvoll. Schwerpunkte sind Objekt orientiertes Programmieren sowie die Schnittstellen zwischen Datenbanken und Programmen. Ich werde meinen Lehrabschluss voraussichtlich im Sommer 2026 erhalten.
+                                </span>
+                            </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2022 - Juli 2026</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">
+                            <span class="text-background-mark">August 2022 - Juli 2026</span><!-- Lesbarkeit erhöhen -->
+                        </span></div>
                     </div>
-                    <!-- Trennung -->
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Mechanikpraktiker EBA, Fachrichtung Elektronische Montage- und Verbindungstechnik</h3>
-                            <div class="subheading mb-3">BBI Züri West Zürich Hardbrücke</div>
-                            <p>Meine erste Ausbildung Absolvierte ich in einer Werkstatt. Schwerpunkte der Ausbildung waren das verdahten von Elektronikkomponenten in z.B: LED Leuchten, Bodendosen und Baustromverteiler. Dabei lernte ich auch das bedienen von Computergesteuerten Prüfanlagen und die Baupläne von Elektronikschaltkästen in den übertrieblichen Kursen bei Swissmechanic in Effretikon ZH.</p>
+                <!-- Trennung -->
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">
+                            <span class="text-background-mark">Mechanikpraktiker EBA, Fachrichtung Elek. Montage & Verbindungstechnik</span><!-- Lesbarkeit erhöhen -->
+                        </h3>
+                        <div class="subheading mb-3">
+                            <span class="text-background-mark">BBI Züri West Zürich Hardbrücke</span><!-- Lesbarkeit erhöhen -->
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2018 - Juli 2021</span></div>
+                        <p>
+                            <span class="text-background-mark">
+                                Meine erste Ausbildung Absolvierte ich in einer Werkstatt. Schwerpunkte der Ausbildung waren das verdahten von Elektronikkomponenten in z.B: LED Leuchten, Bodendosen und Baustromverteiler. Dabei lernte ich auch das bedienen von Computergesteuerten Prüfanlagen und die Baupläne von Elektronikschaltkästen in den übertrieblichen Kursen bei Swissmechanic in Effretikon ZH.
+                            </span>
+                        </p>
                     </div>
-                    <!-- Trennung -->
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0"><!-- Was? --></h3>
-                            <div class="subheading mb-3"><!-- Wo? Firma --></div>
-                            <p><!-- Beschreibung --></p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary"><!-- Datum --></span></div>
-                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">
+                        <span class="text-background-mark">August 2018 - Juli 2021</span><!-- Lesbarkeit erhöhen -->
+                    </span></div>
                 </div>
+                <!-- Trennung -->
+                <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0"><!-- Was? --></h3>
+                        <div class="subheading mb-3"><!-- Wo? Firma --></div>
+                        <p><!-- Beschreibung --></p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary"><!-- Datum --></span></div>
+                    </div>
+                </div><!-- resume-action-content -->
             </section>
             <hr class="m-0" />
             <!-- Arbeitserfahrung-->
-            <section class="resume-section" id="arbeitserfahrung">
+            <section class="resume-section arbeitserfahrung" id="arbeitserfahrung">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Arbeitserfahrung</h2>
+                    <h2 class="mb-5">
+                        <span class="text-background-mark">Arbeitserfahrung</span><!-- Lesbarkeit erhöhen -->
+                    </h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Katalog-Manager · Teilzeit</h3>
-                            <div class="subheading mb-3">Octosoft AG, Steinhausen Zug</div>
-                            <div>Nach dem Abschluss meiner EBA Ausbildung wusste ich, dass ich nicht im Handwerklichen Bereich bleiben möchte. Also fing ich bei der Octosoft AG an und gleich von beginn an war ich sehr Interessiert am Job. Ich suche bestimmte Datensätze die unser Scanner bei Kunden entdeckt hat, Katalogisiere die relevanten Datensätze mithilfe von Regulären ausdrücken (Regex Buddy) zusammen und comitte dies dann in GitKraken. </div>
-                            <p><!-- ? --></p>
+                            <h3 class="mb-0">
+                                <span class="text-background-mark">Katalog-Manager · Teilzeit</span><!-- Lesbarkeit erhöhen -->
+                            </h3>
+                            <div class="subheading mb-3">
+                                <span class="text-background-mark">Octosoft AG, Steinhausen Zug</span><!-- Lesbarkeit erhöhen -->
+                            </div>
+                            <div>
+                                <span class="text-background-mark">
+                                    Nach dem Abschluss meiner EBA Ausbildung wusste ich, dass ich nicht im Handwerklichen Bereich bleiben möchte. Also fing ich bei der Octosoft AG an und gleich von beginn an war ich sehr Interessiert am Job. Ich suche bestimmte Datensätze die unser Scanner bei Kunden entdeckt hat, Katalogisiere die relevanten Datensätze mithilfe von Regulären ausdrücken (Regex Buddy) zusammen und comitte dies dann in GitKraken.
+                                </span>
+                            </div>
+                            <p><!-- ? Details Ausbildung ?--></p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Oktober 2021 - Heute</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">
+                            <span class="text-background-mark">Oktober 2021 - Heute</span><!-- Lesbarkeit erhöhen -->
+                            </span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Praktikum bei Caffè Iannotta, Dietikon ZH</h3>
-                            <div class="subheading mb-3">3 Monatiges Praktikum während der EBA Ausbildung</div>
-                            <div>Zum Ende meiner Ersten Ausbildung, habe ich mein erstes 3 Monatiges Praktikum bei der Firma Caffè Iannotta absolviert. Dort erlernte ich die Reparatur von kleinen bis grossen Industriekaffeemaschinen sowie das Logistik & Versandsystem der Firma.</div>
+                            <h3 class="mb-0">
+                                <span class="text-background-mark">Praktikum bei Caffè Iannotta, Dietikon ZH</span><!-- Lesbarkeit erhöhen -->
+                            </h3>
+                            <div class="subheading mb-3">
+                                <span class="text-background-mark">3 Monatiges Praktikum während der EBA Ausbildung</span><!-- Lesbarkeit erhöhen -->
+                            </div>
+                            <div>
+                                <span class="text-background-mark">
+                                    Zum Ende meiner Ersten Ausbildung, habe ich mein erstes 3 Monatiges Praktikum bei der Firma Caffè Iannotta absolviert. Dort erlernte ich die Reparatur von kleinen bis grossen Industriekaffeemaschinen sowie das Logistik & Versandsystem der Firma.
+                                </span>
+                            </div>
                             <p><!-- ? --></p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Februar 2021 - Mai 2021</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">
+                            <span class="text-background-mark">Februar 2021 - Mai 2021</span><!-- Lesbarkeit erhöhen -->
+                        </span></div>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Skills-->
-            <section class="resume-section" id="skills">
+            <section class="resume-section skills" id="skills">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Meine Programmier Skills auf einen Blick</div>
+                    <h2 class="mb-5">
+                        <span class="text-background-mark">Skills</span><!-- Lesbarkeit erhöhen -->
+                    </h2>
+                    <div class="subheading mb-3">
+                        <span class="text-background-mark">Meine Programmier Skills auf einen Blick</span><!-- Lesbarkeit erhöhen -->
+                    </div>
                     <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fa-brands fa-html5" style="color: #a43232;"></i></li>
-                        <li class="list-inline-item"><i class="fa-brands fa-css3-alt" style="color: #295fbb;"></i></li>
-                        <li class="list-inline-item"><i class="fa-brands fa-js" style="color: rgb(194, 188, 32);"></i></li>
-                        <li class="list-inline-item"><i class="fa-brands fa-github" style="color: #aaaaaa;"></i></li>
-                        <li class="list-inline-item"><i class="fa-brands fa-gitkraken" style="color: #227277;"></i></li>
-                        <div class="java-logo"></div> <!-- Java Logo with Colors -->
-                        <li class="list-inline-item"><i class="fa-solid fa-database" style="color: #7b2323;"></i></li>
-                        <li class="list-inline-item"><i class="fa-brands fa-php" style="color: #7377ad;"></i></li>
+                        <span class="text-background-mark"><!-- Lesbarkeit erhöhen -->
+                            <li class="list-inline-item"><i class="fa-brands fa-html5" style="color: #a43232;"></i></li>
+                            <li class="list-inline-item"><i class="fa-brands fa-css3-alt" style="color: #295fbb;"></i></li>
+                            <li class="list-inline-item"><i class="fa-brands fa-js" style="color: rgb(194, 188, 32);"></i></li>
+                            <li class="list-inline-item"><i class="fa-brands fa-github" style="color: #aaaaaa;"></i></li>
+                            <li class="list-inline-item"><i class="fa-brands fa-gitkraken" style="color: #227277;"></i></li>
+                            <div class="java-logo"></div> <!-- Java Logo with Colors -->
+                            <li class="list-inline-item"><i class="fa-solid fa-database" style="color: #7b2323;"></i></li>
+                            <li class="list-inline-item"><i class="fa-brands fa-php" style="color: #7377ad;"></i></li>
+                        </span>
                     </ul>
-                    <div class="subheading mb-3">Aktuell benutzte Tools & IDE's</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Für Webseiten: Visual Studio Code in Kombination mit GitHub
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Für Java Projekte: IntelliJ IDEA in Kombination mit GitHub
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Für Datenbanken: MySQL Workbench und phpMyAdmin (XAMPP)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Zusätzlich habe ich erste Erfahrungen mit dem Linux Terminal und der Programmiersprache Python
-                        </li>
-                    </ul>
+                    <div class="subheading mb-3">
+                        <span class="text-background-mark">Aktuell benutzte Tools & IDE's</span><!-- Lesbarkeit erhöhen -->
+                    </div>
+                    <span class="text-background-mark">
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Für Webseiten: Visual Studio Code in Kombination mit GitHub
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Für Java Projekte: IntelliJ IDEA in Kombination mit GitHub
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Für Datenbanken: MySQL Workbench und phpMyAdmin (XAMPP)
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Zusätzlich habe ich erste Erfahrungen mit dem Linux Terminal und der Programmiersprache Python
+                            </li>
+                        </ul>
+                    </span><!-- Lesbarkeit erhöhen -->
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Interessen-->
-            <section class="resume-section" id="interessen">
+            <section class="resume-section interessen" id="interessen">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Meine Interessen</h2>
-                    <p>Neben meiner Begeisterung für die Softwareentwicklung & Webentwicklung bin ich an der Gesellschaftlichen Entwicklung in der Schweiz und auch Global interessiert. Ich lese viele Zeitungen und informiere mich auch über Politische Themen wie gerade zum Beispiel die Migrationskrise in der EU und der Klimawandel.</p>
-                    <p class="mb-4">Ein anderes Thema das mich auch Interessiert ist die Wirtschaft. Ich lese zum Beispiel die FuW und Interessiere mich für den Wirtschaftskreislauf. Ich investiere ein Teil meines Geldes anstatt es auf einem Bankkonto zu lagern wo man fast keine Zinsen mehr erhält.</p>
-                    <p class="mb-3"></p>
-                    <p class="mb-3"></p>
+                    <h2 class="mb-5">
+                        <span class="text-background-mark">Meine Interessen</span><!-- Lesbarkeit erhöhen -->
+                    </h2>
+                    <p class="mb-4">
+                        <span class="text-background-mark">
+                            Neben meiner Begeisterung für die Softwareentwicklung & Webentwicklung bin ich an der Gesellschaftlichen Entwicklung in der Schweiz und auch Global interessiert. Ich lese viele Zeitungen und informiere mich auch über Politische Themen wie gerade zum Beispiel die Migrationskrise in der EU und der Klimawandel.
+                        </span>
+                    </p>
+                    <p class="mb-4">
+                        <span class="text-background-mark">
+                            Ein anderes Thema das mich auch Interessiert ist die Wirtschaft. Ich lese Wirtschaftszeitungen und informiere mich über die Wirtschaftslage in der Schweiz.
+                        </span>
+                    </p>
+                    <p class="mb-3">
+                        <span class="text-background-mark">
+                            <!--lorem ispum -->
+                        </span>
+                    </p>
                 </div>
             </section>
             <hr class="m-0" />
