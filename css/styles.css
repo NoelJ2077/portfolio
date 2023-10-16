@@ -15,7 +15,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
- /* Custom Setting */
+ /* Custom-Setting begin */
 #last-edit{
   position: absolute;
   bottom: 0;
@@ -55,7 +55,7 @@
 }
 
 .text-background-mark {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   margin: 5px;
   padding: 4px;
   border-radius: 10px;
@@ -66,12 +66,11 @@
   box-shadow: 0 0 10px 5px rgba(54, 52, 52, 0.8);
   /* Alternative to blur */
 }
-a.documents {/* PDF document Links */
+a.documents {/* links */
   resize: both;
   display: inline-block;
 }
 footer{
-  /* dont use margin! */
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
@@ -79,7 +78,8 @@ footer{
   border: 1px solid gray;
   background-color: lightgray;
 }
-/* End Custom Setting */
+/* Search with ctrl + f -> "Custom-Setting" to find custom stuff */
+/* Custom-Setting end */
 
 :root {
   --bs-blue: #0d6efd;
@@ -113,9 +113,9 @@ footer{
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  /* --bs-primary-rgb: 189, 93, 56; Original standard Color: Orange */
+  /* --bs-primary-rgb: 189, 93, 56; Original Color: Orange | Custom-Setting */
   background-color: rgb(63, 85, 42); /* Nur zum Farbe einstellen! (wird nicht verwendet) */
-  --bs-primary-rgb: 63, 85, 42;
+  --bs-primary-rgb: 63, 85, 42; /* Custom-Setting */
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -7423,8 +7423,9 @@ textarea.form-control-lg {
   flex-grow: 1 !important;
 }
 
-.flex-shrink-0 {
+.flex-shrink-0 { 
   flex-shrink: 0 !important;
+  font-weight: bold; /* Custom-Setting */
 }
 
 .flex-shrink-1 {
@@ -10902,7 +10903,7 @@ textarea.form-control-lg {
 body {
   padding-top: 3.375rem;
   /* color: #6c757d; */
-  color: #000;
+  color: black; /* Above, original Color lightgray. | Custom-Setting */
 }
 
 @media (min-width: 992px) {
