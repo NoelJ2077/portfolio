@@ -37,13 +37,13 @@
   background-image: url(ProfilSki.jpg);
 }
 .ausbildung {
-  background-image: url(SitiaWald.png);
+  background-image: url(Ski.png);
 }
 .arbeitserfahrung {
   background-image: url(SitiaBoat.jpg);
 }
 .skills {
-  background-image: url(Fluss.png);
+  background-image: url(Ziege1.png);
 }
 .interessen {
   background-image: url(codeNight.gif);
@@ -55,7 +55,7 @@
 }
 
 .text-background-mark {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   margin: 5px;
   padding: 4px;
   border-radius: 10px;
@@ -66,9 +66,20 @@
   box-shadow: 0 0 10px 5px rgba(54, 52, 52, 0.8);
   /* Alternative to blur */
 }
-
+a.documents {/* PDF document Links */
+  resize: both;
+  display: inline-block;
+}
+footer{
+  /* dont use margin! */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid gray;
+  background-color: lightgray;
+}
 /* End Custom Setting */
-
 
 :root {
   --bs-blue: #0d6efd;
@@ -102,7 +113,9 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 189, 93, 56;
+  /* --bs-primary-rgb: 189, 93, 56; Original standard Color: Orange */
+  background-color: rgb(63, 85, 42); /* Nur zum Farbe einstellen! (wird nicht verwendet) */
+  --bs-primary-rgb: 63, 85, 42;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
