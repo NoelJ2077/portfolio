@@ -46,7 +46,7 @@
   background-image: url(Ziege1.png);
 }
 .interessen {
-  background-image: url(codeNight.gif);
+  background-image: url(codingGIF.gif);
 }
 .resume-section {
   position: relative;
@@ -66,7 +66,7 @@
   box-shadow: 0 0 10px 5px rgba(54, 52, 52, 0.8);
   /* Alternative to blur */
 }
-a.documents {/* links */
+a.documents {
   resize: both;
   display: inline-block;
 }
@@ -78,7 +78,18 @@ footer{
   border: 1px solid gray;
   background-color: lightgray;
 }
-/* Search with ctrl + f -> "Custom-Setting" to find custom stuff */
+#spacer1 {
+  height: 450px;
+  /* will still look trash because too much Text! */
+}
+@media (max-width: 768px) {
+  #spacer1 {
+    height: 0px;
+    clip-path: inset(0px 0px 0px 200px);
+  }
+}
+
+/* Search with ctrl + f -> "Custom-Setting" */
 /* Custom-Setting end */
 
 :root {
@@ -114,8 +125,8 @@ footer{
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   /* --bs-primary-rgb: 189, 93, 56; Original Color: Orange | Custom-Setting */
-  background-color: rgb(63, 85, 42); /* Nur zum Farbe einstellen! (wird nicht verwendet) */
   --bs-primary-rgb: 63, 85, 42; /* Custom-Setting */
+    background-color: rgb(63, 85, 42); /* Nur zum Farbe einstellen! ^ (wird nicht verwendet) */
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
