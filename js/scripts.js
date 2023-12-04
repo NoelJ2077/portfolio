@@ -99,4 +99,27 @@ function draw(currentTime) {
 // call draw() once to start the endless animation
 requestAnimationFrame(draw);
 
+// Update the date in the bottom Nav
+const fs = require('fs');
+const currentDate = new Date().toLocaleDateString('de-DE', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+});
+
+const filePath = path.join(__dirname, 'PortfolioWebsite', 'index.html');
+
+fs.readFile(filePath, 'utf8', function (err, data) {
+    if (err) {
+        return console.log(err);
+    }
+
+    const updatedHTML = data.replace(/<div id="last-edit">Stand:.*?<\/div>/, `<div id="last-edit">Stand: ${currentDate}</div>`);
+
+    fs.writeFile(filePath, updatedHTML, 'utf8', function (err) {
+        if (err) return console.log(err);
+        console.log('Das Datum wurde aktualisiert!');
+    });
+});
+
 /* end Custom Javascript */
