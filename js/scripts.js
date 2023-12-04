@@ -32,6 +32,71 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
 /* start Custom Javascript */
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+
+canvas.width = canvas.parentNode.clientWidth;
+canvas.height = canvas.parentNode.clientHeight;
+
+var buffer = document.createElement('canvas');
+var bufferCtx = buffer.getContext('2d');
+buffer.width = canvas.width;
+buffer.height = canvas.height;
+
+var lines = [];
+var numLines = 100;
+
+
+
+for (var i = 0; i < numLines; i++) {
+    var line = {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        dx: (Math.random() - 0.5) * 4,
+        dy: (Math.random() - 0.5) * 4,
+        length: Math.random() * 200,
+        speed: 0.2 + Math.random() * 1,
+        thickness: Math.random() * 40,
+        color: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, ${Math.random()})`
+    };
+    lines.push(line);
+}
+
+var lastFrameTime = performance.now();
+
+function draw(currentTime) {
+    var elapsedTime = currentTime - lastFrameTime;
+    lastFrameTime = currentTime;
+
+    bufferCtx.clearRect(0, 0, canvas.width, canvas.height);
+
+    lines.forEach(function (line) {
+        bufferCtx.beginPath();
+        bufferCtx.moveTo(line.x, line.y);
+        bufferCtx.lineTo(line.x + line.length * line.dx, line.y + line.length * line.dy);
+        bufferCtx.strokeStyle = line.color;
+        bufferCtx.lineWidth = line.thickness;
+        bufferCtx.stroke();
+
+        line.x += line.dx * line.speed * (elapsedTime / (1000 / 60));
+
+        if (line.x - line.length > canvas.width || line.x + line.length < 0 || line.y - line.length > canvas.height || line.y + line.length < 0) {
+            line.x = Math.random() * canvas.width;
+            line.y = Math.random() * canvas.height;
+        }
+    });
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(buffer, 0, 0);
+
+    // Make the lines move
+    requestAnimationFrame(draw);
+}
+
+// call draw() once to start the endless animation
+requestAnimationFrame(draw);
 
 /* end Custom Javascript */
