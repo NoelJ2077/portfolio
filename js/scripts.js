@@ -46,20 +46,20 @@ var bufferCtx = buffer.getContext('2d');
 buffer.width = canvas.width;
 buffer.height = canvas.height;
 
-var lines = [];
-var numLines = 100;
+var lines = []; // init empty array of lines
+var numLines = 250; // adjust this to control the number of lines drawn
 
 
 
 for (var i = 0; i < numLines; i++) {
-    var line = {
+    var line = { // add a new line to the array
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         dx: (Math.random() - 0.5) * 4,
         dy: (Math.random() - 0.5) * 4,
-        length: Math.random() * 200,
+        length: Math.random() * 75,
         speed: 0.2 + Math.random() * 1,
-        thickness: Math.random() * 40,
+        thickness: Math.random() * 50,
         color: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, ${Math.random()})`
     };
     lines.push(line);
@@ -79,6 +79,9 @@ function draw(currentTime) {
         bufferCtx.lineTo(line.x + line.length * line.dx, line.y + line.length * line.dy);
         bufferCtx.strokeStyle = line.color;
         bufferCtx.lineWidth = line.thickness;
+        bufferCtx.lineCap = 'round';
+        bufferCtx.lineJoin = 'round';
+        bufferCtx.shadowBlur = 20;
         bufferCtx.stroke();
 
         line.x += line.dx * line.speed * (elapsedTime / (1000 / 60));

@@ -15,7 +15,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
- /* Custom-Setting begin */
+ /* Main Custom-Setting begin */
 #last-edit{
   position: absolute;
   bottom: 0;
@@ -95,7 +95,7 @@ canvas {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--bs-gray-dark);
+  background: linear-gradient(to bottom, #495057, #04414d, #13653f, #3e310b);
   z-index: 0;
 }
 .container-fluid {
@@ -104,7 +104,7 @@ canvas {
 }
 
 /* Search with ctrl + f -> "Custom-Setting" */
-/* Custom-Setting end */
+/* Main Custom-Setting end */
 
 :root {
   --bs-blue: #0d6efd;
@@ -139,8 +139,8 @@ canvas {
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   /* --bs-primary-rgb: 189, 93, 56; Original Color: Orange | Custom-Setting */
-  --bs-primary-rgb: 63, 85, 42; /* Custom-Setting */
-    background-color: rgb(63, 85, 42); /* Nur zum Farbe einstellen! ^ (wird nicht verwendet) */
+  --bs-primary-rgb: 74, 84, 39; /* Custom-Setting */
+    background-color: rgb(74, 84, 39); /* Nur zum Farbe einstellen! ^ (wird nicht verwendet) */
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
