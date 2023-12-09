@@ -58,7 +58,7 @@ for (var i = 0; i < numLines; i++) {
         dx: (Math.random() - 0.5) * 4,
         dy: (Math.random() - 0.5) * 4,
         length: Math.random() * 75,
-        speed: 0.2 + Math.random() * 1,
+        speed: 0.2 + Math.random() * 0.2,
         thickness: Math.random() * 50,
         color: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, ${Math.random()})`
     };
