@@ -1,105 +1,72 @@
-/*!
-* Start Bootstrap - Resume v7.0.6 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
-window.addEventListener('DOMContentLoaded', event => {
-
-    // Activate Bootstrap scrollspy on the main nav element
-    const sideNav = document.body.querySelector('#sideNav');
-    if (sideNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#sideNav',
-            rootMargin: '0px 0px -40%',
-        });
-    };
-
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
-
-});
-
-
-/* start Custom Javascript */
-var canvas = document.getElementById('myCanvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
 
 canvas.width = canvas.parentNode.clientWidth;
 canvas.height = canvas.parentNode.clientHeight;
 
-var buffer = document.createElement('canvas');
-var bufferCtx = buffer.getContext('2d');
-buffer.width = canvas.width;
-buffer.height = canvas.height;
+const particles = [];
+const numParticles = 50; // Control the number of particles
 
-var lines = []; // init empty array of lines
-var numLines = 250; // adjust this to control the number of lines drawn
+class Particle {
+    constructor(){
+        this.x = canvas.width * Math.random();
+        this.y = canvas.height * Math.random();
+        this.size = Math.random() * 8 + 1;
+        this.speedX = Math.random() * 3 - 1.5;
+        this.speedY = Math.random() * 3 - 1.5;
+        this.color = 'rgba(' + (Math.random()*255).toFixed() + ',' + (Math.random()*255).toFixed() + ',' + (Math.random()*255).toFixed() + ',1)';
+        this.shadowColor = 'rgba(' + (Math.random()*255).toFixed() + ',' + (Math.random()*255).toFixed() + ',' + (Math.random()*255).toFixed() + ',1)';
+        this.trail = [];
+    }
+    
+    update(){
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.size > 0.2) this.size -= 0.1;
+    }
 
-
-
-for (var i = 0; i < numLines; i++) {
-    var line = { // add a new line to the array
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        dx: (Math.random() - 0.5) * 4,
-        dy: (Math.random() - 0.5) * 4,
-        length: Math.random() * 75,
-        speed: 0.2 + Math.random() * 0.2,
-        thickness: Math.random() * 50,
-        color: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, ${Math.random()})`
-    };
-    lines.push(line);
+    draw(){
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
 }
 
-var lastFrameTime = performance.now();
+function handleParticles(){
+    for (let i = 0; i < numParticles; i++){
+        particles.push(new Particle());
+    }
+    for (let i = 0; i < particles.length; i++){
+        particles[i].update();
+        particles[i].draw();
 
-function draw(currentTime) {
-    var elapsedTime = currentTime - lastFrameTime;
-    lastFrameTime = currentTime;
-
-    bufferCtx.clearRect(0, 0, canvas.width, canvas.height);
-
-    lines.forEach(function (line) {
-        bufferCtx.beginPath();
-        bufferCtx.moveTo(line.x, line.y);
-        bufferCtx.lineTo(line.x + line.length * line.dx, line.y + line.length * line.dy);
-        bufferCtx.strokeStyle = line.color;
-        bufferCtx.lineWidth = line.thickness;
-        bufferCtx.lineCap = 'round';
-        bufferCtx.lineJoin = 'round';
-        bufferCtx.shadowBlur = 20;
-        bufferCtx.stroke();
-
-        line.x += line.dx * line.speed * (elapsedTime / (1000 / 60));
-
-        if (line.x - line.length > canvas.width || line.x + line.length < 0 || line.y - line.length > canvas.height || line.y + line.length < 0) {
-            line.x = Math.random() * canvas.width;
-            line.y = Math.random() * canvas.height;
+        for (let j = i; j < particles.length; j++){
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            if (distance < 100){
+                ctx.beginPath();
+                ctx.strokeStyle = particles[i].color;
+                ctx.lineWidth = particles[i].size/10;
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.stroke();
+            }
         }
-    });
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(buffer, 0, 0);
-
-    // Make the lines move
-    requestAnimationFrame(draw);
+        if (particles[i].size <= 0.2){
+            particles.splice(i, 1);
+            i--;
+        }
+    }
 }
 
-// call draw() once to start the endless animation
-requestAnimationFrame(draw);
+function animate(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    handleParticles();
+    requestAnimationFrame(animate);
+}
 
-/* end Custom Javascript */
+animate();
+
