@@ -904,25 +904,7 @@
       </div>
     </section><!-- End Contact Section -->
 
-<script>
-  // for hovering over * data
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
 
-function sendMail() {
-  var recipient = document.getElementById('recipient').value;
-  var subject = document.getElementById('subject').value;
-  var message = document.getElementById('message').value;
-
-  console.log('Recipient:', recipient);
-  console.log('Subject:', subject);
-  console.log('Message:', message);
-
-  var mailto = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
-  window.open(mailto, '_blank');
-}
-</script>
 
   </main><!-- End #main -->
 
@@ -963,6 +945,45 @@ function sendMail() {
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("qMoR3pawMsWpmCahZ");  // Replace YOUR_PUBLIC_KEY with your real public key from EmailJS
+    })();
+  </script>
+
 </body>
 
 </html>
+
+<script>
+  // for hovering over * data
+  (function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+function sendMail() {
+  var recipient = document.getElementById('recipient').value;
+  var subject = document.getElementById('subject').value;
+  var message = document.getElementById('message').value;
+
+  // Prepare parameters for EmailJS
+  var templateParams = {
+    recipient: recipient,
+    subject: subject,
+    message: message
+  };
+
+  // Send email via EmailJS
+  emailjs.send('service_utqf0dw_secret_0', 'template_pb0y8ab_secret0', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       alert('Message sent successfully!');
+    }, function(error) {
+       console.log('FAILED...', error);
+       alert('Message failed to send. Please try again later.');
+    });
+}
+
+</script>
