@@ -863,6 +863,10 @@
                           <input type="email" class="form-control" id="frommail" placeholder="Your Email" required>
                         </div>
                         <div class="mb-3">
+                          <label for="fromname" class="form-label">Your Name <span style="font-size: 70%;">&lpar;Ihr Name&rpar;</span></label>
+                          <input type="text" class="form-control" id="fromname" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
                           <label for="subject" class="form-label">Subject <span style="font-size: 70%;">&lpar;Betreff&rpar;</span></label>
                           <input type="text" class="form-control" id="subject" placeholder="Subject" required>
                         </div>
@@ -957,32 +961,44 @@
 </html>
 
 <script>
+  var lastSentTime = localStorage.getItem('lastSentTime') ? parseInt(localStorage.getItem('lastSentTime')) : 0;
+  
   // for hovering over * data
   (function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-
-function sendMail() {
-  var frommail = document.getElementById('frommail').value;
-  var subject = document.getElementById('subject').value;
-  var message = document.getElementById('message').value;
-
-  // Parameter names must match EmailJS template parameters
-  var templateParams = {
-    fromemail: frommail,
-    subject: subject,
-    message: message
-  };
-
-  // Send email via EmailJS
-  emailjs.send('service_utqf0dw_secret_0', 'template_pb0y8ab_secret0', templateParams)
-    .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-       alert('Message sent successfully!');
-    }, function(error) {
-       console.log('FAILED...', error);
-       alert('Message failed to send. Please try again later.');
-    });
-}
-
-</script>
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+  
+  function sendMail() {
+    var currentTime = new Date().getTime();
+    if (currentTime - lastSentTime < 3 * 60 * 1000) {
+      alert('Please wait at least 3 minutes before sending another message.');
+      return;
+    }
+    var frommail = document.getElementById('frommail').value;
+    var fromname = document.getElementById('fromname').value;
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value;
+  
+    // Parameter names must match EmailJS template parameters
+    var templateParams = {
+      fromemail: frommail,
+      fromname: fromname,
+      subject: subject,
+      message: message
+    };
+  
+    // Send email via EmailJS
+    emailjs.send('service_utqf0dw_secret_0', 'template_pb0y8ab_secret0', templateParams)
+      .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Message sent successfully!');
+          // Update lastSentTime in localStorage
+          lastSentTime = currentTime;
+          localStorage.setItem('lastSentTime', lastSentTime);
+      }, function(error) {
+          console.log('FAILED...', error);
+          alert('Message failed to send. Please try again later.');
+      });
+  }
+  </script>
+  
