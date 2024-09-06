@@ -859,20 +859,19 @@
                     <div>
                       <form id="contactForm">
                         <div class="mb-3">
-                          <label for="recipient" class="form-label">Recipient</label>
-                          <input type="email" class="form-control" id="recipient" value="noel.joerg@outlook.com" required readonly>
+                          <label for="frommail" class="form-label">Your Email <span style="font-size: 70%;">&lpar;Ihre E-Mail&rpar;</span></label>
+                          <input type="email" class="form-control" id="frommail" placeholder="Your Email" required>
                         </div>
                         <div class="mb-3">
-                          <label for="subject" class="form-label">Subject</label>
+                          <label for="subject" class="form-label">Subject <span style="font-size: 70%;">&lpar;Betreff&rpar;</span></label>
                           <input type="text" class="form-control" id="subject" placeholder="Subject" required>
                         </div>
                         <div class="mb-3">
-                          <label for="message" class="form-label">Message</label>
-                          <textarea class="form-control" id="message" rows="5" placeholder="Your message" required></textarea>
+                          <label for="message" class="form-label">Message <span style="font-size: 70%;">&lpar;Nachricht&rpar;</span></label>
+                          <textarea class="form-control" id="message" rows="5" placeholder="Your message: (max 512 characters)" maxlength="512" required></textarea>
                         </div>
                         <div style="display: flex; align-items: center;">
-                          <button type="button" onclick="sendMail()" class="btn btn-primary">Send</button>
-                          <span style="margin-left: 10px;">Button will open your default Mail client with your Text</span>
+                          <button type="button" onclick="sendMail()" class="btn btn-primary">Send now</button>
                         </div>
                       </form>
                     </div>
@@ -949,7 +948,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
     (function(){
-        emailjs.init("qMoR3pawMsWpmCahZ");  // Replace YOUR_PUBLIC_KEY with your real public key from EmailJS
+        emailjs.init("qMoR3pawMsWpmCahZ");
     })();
   </script>
 
@@ -964,13 +963,13 @@
 })
 
 function sendMail() {
-  var recipient = document.getElementById('recipient').value;
+  var frommail = document.getElementById('frommail').value;
   var subject = document.getElementById('subject').value;
   var message = document.getElementById('message').value;
 
-  // Prepare parameters for EmailJS
+  // Parameter names must match EmailJS template parameters
   var templateParams = {
-    recipient: recipient,
+    fromemail: frommail,
     subject: subject,
     message: message
   };
