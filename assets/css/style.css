@@ -6,6 +6,14 @@
 * License: https://bootstrapmade.com/license/
 */
 /* CUSTOM CSS */
+
+/* Add your custom styles here */
+
+.vtc-link {
+  color: #5c90c9;
+  text-decoration: underline;
+}
+
 .service-box-bg-custom {
   background-color: #474747!important;
 }
