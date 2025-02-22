@@ -340,18 +340,22 @@
               <div class="service-content">
                 <h2 class="s-title text-white">2-year Trainee for IPA</h2>
                 <p class="s-description text-center text-white">
-                  As part of my apprenticeship at Bénédict, I complete a 2 year internship to gain practical experience. 
-                  At Spektra, we develop customizations for <a href="https://www.vertec.com" target="_blank" class="vtc-link">Vertec</a> using Python, serving over 500 companies. 
-                  I have also gained experience working with various APIs, including Microsoft Graph, Abacus, and COM interfaces. Providing customer support is another key part of my daily responsibilities. 
-                  Our team ensures that Vertec operates smoothly and meets customer satisfaction. I will also complete the Individual Practical Work (IPA) here, to get my EFZ certificate.
+                  As part of my apprenticeship at Bénédict, I am doing a 2-year internship to gain practical experience.  
+                    At <a href="https://www.spektra.ch/" target="_blank" class="career-link">Spektra</a>, we customize <a href="https://www.vertec.com" target="_blank" class="career-link">Vertec</a> using Python with <a href="https://en.wikipedia.org/wiki/Object_Constraint_Language" target="_blank" class="career-link">OCL</a> for 500+ companies.  
+                  I also work with various APIs like <a href="https://learn.microsoft.com/en-us/graph/use-the-api" target="_blank" class="career-link">Microsoft Graph</a>, Abacus, and COM interfaces.  
+                  Customer support is part of my daily tasks. We create and customize Word and Excel templates with Python for Vertec CRM.
                 </p>
                 <p class="s-description text-center text-white">
-                  <span class="bi bi-calendar2-week"></span> <strong>April 2024 – July 2026</strong>
+                  Our team keeps Vertec running smoothly and ensures customer satisfaction.  
+                  I will also complete the Individual Practical Work (IPA) here to earn my EFZ certificate.
                 </p>
-                <a href="#" class="btn btn-primary" title="No document available">No document available.</a>
+                <p class="s-description text-center text-white">
+                  <span class="bi bi-calendar2-week"></span> <strong>August 2024 – July 2026</strong>
+                </p>
+                <a href="javascript:void(0);" class="btn btn-primary" title="No document available" style="cursor: not-allowed;">No document available.</a>
               </div>
             </div>
-          </div>          
+          </div>
 
           <div class="col-md-4"><!-- Section 2 -->
             <div class="service-box service-box-bg-custom"><!-- custom bg -->
@@ -382,7 +386,7 @@
           <div class="col-md-4"><!-- Section 3 -->
             <div class="service-box service-box-bg-custom"><!-- custom bg -->
               <h2 class="s-title text-white">catalog-manager
-                <span class="subtitle">Octosoft AG</span>
+                <span class="subtitle"><a href="https://www.octosoft.ch" target="_blank" class="career-link">Octosoft AG</a></span>
               </h2>
               <br><!-- br tags -->
               <span class="s-description text-center text-white">
@@ -498,6 +502,9 @@
               <div class="counter-num">
                 <p data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="counter purecounter"></p>
                 <span class="counter-text">satisfied employers</span>
+                <span class="cnt-text-hover">BBI Züri West</span>
+                <span class="cnt-text-hover">Octosoft AG</span>
+                <span class="cnt-text-hover">Spektra Netcom AG</span>
               </div>
             </div>
           </div>
@@ -530,7 +537,7 @@
               </div>
               <div class="counter-num">
                 <p data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">languages</span>
+                <span class="counter-text">languages spoken</span>
               </div>
             </div>
           </div>
@@ -981,7 +988,7 @@
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
-    (function(){
+    (function(){ /* pub key */
         emailjs.init("qMoR3pawMsWpmCahZ");
     })();
   </script>
@@ -989,46 +996,3 @@
 </body>
 
 </html>
-
-<script>
-  var lastSentTime = localStorage.getItem('lastSentTime') ? parseInt(localStorage.getItem('lastSentTime')) : 0;
-  
-  // for hovering over * data
-  (function () {
-    $('[data-toggle="tooltip"]').tooltip();
-  });
-  
-  function sendMail() {
-    var currentTime = new Date().getTime();
-    if (currentTime - lastSentTime < 3 * 60 * 1000) {
-      alert('Please wait at least 3 minutes before sending another message.');
-      return;
-    }
-    var frommail = document.getElementById('frommail').value;
-    var fromname = document.getElementById('fromname').value;
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('message').value;
-  
-    // Parameter names must match EmailJS template parameters
-    var templateParams = {
-      fromemail: frommail,
-      fromname: fromname,
-      subject: subject,
-      message: message
-    };
-  
-    // Send email via EmailJS
-    emailjs.send('service_utqf0dw_secret_0', 'template_pb0y8ab_secret0', templateParams)
-      .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
-          alert('Message sent successfully!');
-          // Update lastSentTime in localStorage
-          lastSentTime = currentTime;
-          localStorage.setItem('lastSentTime', lastSentTime);
-      }, function(error) {
-          console.log('FAILED...', error);
-          alert('Message failed to send. Please try again later.');
-      });
-  }
-  </script>
-  
