@@ -35,6 +35,16 @@
   opacity: 1;
 }
 
+.career-link {
+  color: #c586d4;
+  text-decoration: none;
+  font-weight: bold; 
+  transition: color 0.2s ease-in-out; 
+}
+.career-link:hover {
+  color: #9b5fc9;
+  text-decoration: underline;
+}
 
 .service-box-bg-custom {
   background-color: #474747!important;
