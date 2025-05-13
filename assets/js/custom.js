@@ -1,4 +1,5 @@
 /** custom 2025: */
+
 var lastSentTime = localStorage.getItem('lastSentTime') ? parseInt(localStorage.getItem('lastSentTime')) : 0;
 function sendMail() {
     
