@@ -115,16 +115,16 @@
               <h3>Project information</h3>
               <ul>
                 <li><strong>Category</strong>: Flask web application</li>
-                <li><strong>Client</strong>: MS Graph API</li>
+                <li><strong>Client</strong>: <a href="https://learn.microsoft.com/en-us/graph/use-the-api">Graph API</a></li>
                 <li><strong>Project date</strong>: Q1 2025</li>
                 <li><strong>Workduration</strong>: 10 weeks (~21 hours total)</li>
                 <li><strong>Repository URL</strong>: <a href="https://github.com/NoelJ2077/OutlookSyncProjekt ">OutlookSync</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>Outlook contact editor in Tenant on behalf of a user (delegated)</h2>
+              <h2>Simple Outlook editor, login on behalf of a user.</h2>
                 <p class="mb-5">
-                This was a school project in the third year of my apprenticeship. I decided to go for Microsot Graph-API, because Microsoft Entra / Azure portal is a big topic and it is good practice for work.
+                This was a school project in the third year of my apprenticeship. I decided to go for the Microsot Graph-API, because Microsoft Entra / Azure portal is a big IT-topic and it is a good practice for future Entra related work.
                 </p>
               <!-- icon with learning experience -->
               <div class="icon-box">
@@ -132,12 +132,13 @@
                     <div class="icon"><i class="bi bi-lightbulb"></i></div>
                     <h4 class="title">First touch with Graph-API</h4>
                 </div>
-                <p class="description">todo: text</p>
-                <p class="description">todo: text</p>
+                <p class="description">API-Features: /create, /edit, /delete your addresses within your organization. </p>
+                <p class="description">Server-Features: /backup all contacts from your office account into a SQLite3 database. This method gets all contacts from your Microsoft Account and safes them locally. It is currently not possible to import this data back into Outlook. </p>
+                <p class="description">Info: Dynamic viewing of contactfields, if for example field xy is empty, the header will not be displayed, this makes the website more friendly for smaller screens. It is recommended to use 2-FA when logging in. This can be enabled for your Microsoft account from a Tenant-administrator. There is also a possibility to login locally with account a and then choose account b when signing into Microsoft. Then the user will be redirected to a logout page with a warning! </p>
                 
               </div>
               <p class="description"><strong>Requirements to run the App: <br></strong>
-              Flask 3.1, Python 3, Requests, some libraries downloadable with 'pip'.
+              Flask 3.1 | Python 3 | Requests | Some libraries that are downloadable with 'PyPI'.
               </p>
           </div>
         </div>
