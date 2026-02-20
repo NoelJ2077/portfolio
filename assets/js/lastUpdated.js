@@ -1,7 +1,7 @@
 // lastUpdated.js
 // update date when changes are pushed!
-const lastUpdated = "12 December 2025";
-const copyrightdate = "&copy; Copyright 2024 - 2025 <strong>Noël Jörg</strong>"
+const lastUpdated = "20 February 2026";
+const copyrightdate = "&copy; Copyright 2024 - 2026 <strong>Noël Jörg</strong>"
 // insert into p tag
 document.addEventListener("DOMContentLoaded", function() {
   var el = document.querySelector(".last-updated"); // p tag
