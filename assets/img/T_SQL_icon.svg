@@ -1,0 +1,27 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#000000" stroke-width="18" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M155 40 H420 C430 40 438 48 438 58 V488 C438 498 430 506 420 506 H160 C150 506 142 498 142 488 V235 L155 40 Z" fill="#e0f7fb"/>
+    <path d="M142 235 L235 235 C245 235 253 243 253 253 L253 340 Z" fill="#c9edf5"/>
+
+    <ellipse cx="105" cy="245" rx="95" ry="35" fill="#8ec3d9"/>
+    <path d="M10 245 V295 C10 314 52 330 105 330 C158 330 200 314 200 295 V245" fill="#3f8fb8"/>
+    <path d="M10 285 V335 C10 354 52 370 105 370 C158 370 200 354 200 335 V285" fill="#3f8fb8"/>
+    <path d="M10 325 V375 C10 394 52 410 105 410 C158 410 200 394 200 375 V325" fill="#3f8fb8"/>
+    <ellipse cx="105" cy="245" rx="95" ry="35" fill="none"/>
+
+    <rect x="165" y="72" width="290" height="140" rx="14" fill="#ff2d78"/>
+    <rect x="165" y="72" width="290" height="60" fill="#ff6d9d" stroke="none"/>
+
+    <g fill="#000000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-weight="900">
+      <text x="310" y="162" font-size="72" text-anchor="middle">T-SQL</text>
+    </g>
+
+    <path d="M310 305 L280 335 L310 365" fill="none"/>
+    <path d="M335 295 L305 375" fill="none"/>
+    <path d="M330 305 L360 335 L330 365" fill="none"/>
+
+    <line x1="270" y1="410" x2="410" y2="410" fill="none"/>
+    <line x1="270" y1="440" x2="410" y2="440" fill="none"/>
+    <line x1="270" y1="470" x2="410" y2="470" fill="none"/>
+  </g>
+</svg>

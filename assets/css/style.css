@@ -81,6 +81,38 @@
 .icon {
   font-size: 24px;
 }
+
+.skill-icon {
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-svg {
+  display: block;
+  width: auto;
+  height: 30px;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.python-icon { color: #306998 !important; }
+.html-icon { color: #e34f26 !important; }
+.css-icon { color: #264de4 !important; }
+.js-icon { color: #f0db4f !important; text-shadow: 0 0 1px #000; }
+.db-icon { color: #2f80ed !important; }
+.seedling-icon { color: #2e8b57 !important; }
+.github-icon { color: #181717 !important; }
+.git-icon { color: #f05033 !important; }
+.ubuntu-icon { color: #e95420 !important; }
+.terminal-icon { color: #4f46e5 !important; }
+.lang-icon { color: #7c3aed !important; }
+.word-icon { color: #2b579a !important; }
+.excel-icon { color: #217346 !important; }
+.ppt-icon { color: #d24726 !important; }
+.office-icon { color: #2b579a !important; }
+
 .title {
   margin: 0;
   font-weight: bold;
@@ -100,6 +132,102 @@
 .counter-text {
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+.career-inline-tile {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(4px);
+}
+
+.career-inline-tile .btn-outline-light,
+.download-card .btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.career-inline-tile .btn-outline-light:hover,
+.download-card .btn-outline-light:hover {
+  background-color: #fff;
+  color: #1e1e1e;
+}
+
+.downloads-section {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.06) 100%);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.downloads-hero {
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.download-card {
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.weather-widget {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 1rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.16);
+  color: #fff;
+  max-width: 330px;
+}
+
+.weather-topline,
+.weather-mainline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.weather-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.weather-date {
+  font-size: 0.84rem;
+  opacity: 0.9;
+}
+
+.weather-temp {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.weather-desc {
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+.weather-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.6rem;
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  opacity: 0.95;
 }
 /* CUSTOM CSS END*/
 /*--------------------------------------------------------------
@@ -302,10 +430,74 @@ a:hover {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
+.panel-theme-toggle {
+  border: 1px solid rgba(30, 30, 30, 0.15);
+  background: rgba(255, 255, 255, 0.92);
+  color: #212529;
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+.panel-theme-toggle:hover {
+  transform: translateY(-1px);
+  background: #f4f6f8;
+}
+
+.about-panel-dark {
+  background: linear-gradient(145deg, #142033 0%, #23364c 100%);
+  color: #f5f7fb;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.about-panel-dark .panel-theme-toggle {
+  background: rgba(255, 255, 255, 0.12);
+  color: #f5f7fb;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.about-panel-dark .panel-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.about-panel-dark .title-s,
+.about-panel-dark .about-info,
+.about-panel-dark .skill-mf,
+.about-panel-dark .job-list li,
+.about-panel-dark .about-info a,
+.about-panel-dark .skill-mf span,
+.about-panel-dark .job-list a,
+.about-panel-dark .title-left,
+.about-panel-dark .lead {
+  color: #f5f7fb;
+}
+
+.about-panel-dark .progress {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.about-panel-dark .progress-bar {
+  background-color: #67b3ff;
+}
+
+.about-panel-dark .about-img img {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.16);
+}
+
 @media (min-width: 768px) {
   .box-shadow-full {
     padding: 3rem;
   }
+}
+
+.about-panel-dark .lead a {
+  color: #67b3ff;
+}
+
+.about-panel-dark .lead a:hover {
+  color: #9fd0ff;
 }
 
 /*------/ Socials /------*/
@@ -959,12 +1151,43 @@ a:hover {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services-mf .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services-mf .row > [class*="col-"] {
+  display: flex;
+  margin-bottom: 2rem; /* Abstand zwischen den Reihen -> hier statt auf .service-box */
+}
+
 .service-box {
   background-color: #fff;
   padding: 2.5rem 1.3rem;
   border-radius: 1rem;
-  margin-bottom: 3rem;
   text-align: center;
+  color: #1e1e1e;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* KEIN margin-bottom mehr hier, das übernimmt jetzt die Spalte */
+}
+
+.services-mf .title-box {
+  text-align: center;
+  width: 100%;
+}
+
+.services-mf .title-a,
+.services-mf .subtitle-a {
+  text-align: center;
+  width: 100%;
+}
+
+.services-mf .line-mf {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-box:hover .ico-circle {
@@ -974,15 +1197,12 @@ a:hover {
   box-shadow: 0 0 0 10px #0078ff;
 }
 
-.service-box {
-  margin-bottom: 1rem;
-  color: #1e1e1e;
-}
 .service-ico {
   color: #1e1e1e;
   margin-top: 2em;
   margin-bottom: 0.5em;
 }
+
 .service-box .ico-circle {
   transition: all 500ms ease;
   display: inline-flex;
@@ -1006,6 +1226,15 @@ a:hover {
   color: #4e4e4e;
 }
 
+.service-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-content .btn {
+  margin-top: auto; /* Button bleibt unten */
+}
 /*--------------------------------------------------------------
 # Counter
 --------------------------------------------------------------*/

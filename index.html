@@ -53,6 +53,7 @@
           <li><a class="nav-link scrollto" href="#services">Career</a></li>
           <li><a class="nav-link scrollto " href="#work">My Projects</a></li>
           <li><a class="nav-link scrollto " href="#blog">Hobbies & Interests</a></li>
+          <li><a class="nav-link scrollto" href="#downloads">Downloads</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -70,6 +71,23 @@
           <!--<p class="display-6 color-d">Hello, world!</p>-->
           <h1 class="hero-title mb-4">Portfolio of Noël Jörg</h1>
             <p class="hero-subtitle"><span class="typed" data-typed-items="Junior API Developer, Software Packaging Specialist"></span></p>
+            <div class="weather-widget" id="weatherWidget" aria-live="polite">
+              <div class="weather-topline">
+                <span class="weather-label">Today in Jonen</span>
+                <span class="weather-date" id="weatherDate">Loading date…</span>
+              </div>
+              <div class="weather-mainline">
+                <span class="weather-temp" id="weatherTemp">Loading…</span>
+                <span class="weather-desc" id="weatherDesc">Fetching weather…</span>
+              </div>
+              <div class="weather-details">
+                <span id="weatherRange">Min / Max</span>
+                <span id="weatherHumidity">Humidity</span>
+                <span id="weatherDewpoint">Dew point</span>
+                <span id="weatherWind">Wind</span>
+                <span id="weatherUv">UV index</span>
+              </div>
+            </div>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
         </div>
       </div>
@@ -83,7 +101,13 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <div class="box-shadow-full">
+            <div class="box-shadow-full about-panel">
+              <div class="d-flex justify-content-end mb-3">
+                <button type="button" class="panel-theme-toggle" id="panelThemeToggle" aria-pressed="false" aria-label="Toggle light mode for the profile page-panel">
+                  <i class="bi bi-moon-fill me-2"></i>
+                  <span>Light page</span>
+                </button>
+              </div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="row">
@@ -95,37 +119,39 @@
                     <div class="col-sm-6 col-md-7">
                       <div class="about-info">
                         <p><span class="title-s">Name: </span> <span>Noël Jörg</span></p>
-                        <p><span class="title-s">Profile: </span> <span><br>- Junior API Developer @ Spektra <br>- App Packaging Specialist @ Octosoft</span></p>
+                        <div class="title-s">Current Job(s):</div>
+                        <ul class="job-list">
+                          <li>50% Junior API Developer @ <a href="https://www.spektra.ch/" target="_blank" rel="noopener">Spektra</a></li>
+                          <li>30% App Packaging Specialist @ <a href="https://www.octosoft.ch/" target="_blank" rel="noopener">Octosoft</a></li>
+                        </ul>
                         <p><span class="title-s">Email: </span> <span><a href="mailto:noel.joerg@outlook.com">noel.joerg@outlook.com</a></span></p>
                         <p><span class="title-s">GitHub: </span> <span><a href="https://github.com/NoelJ2077">NoelJ2077</a></span></p>
                         <p><span class="title-s">Location: </span> <span>8916 Jonen, Switzerland</span></p>
                       </div>
                     </div>
                   </div>
-                <div class="skill-mf"><!-- Software & Hardware Skills -->
-                  <p class="title-s">Software Skills (Development over the last 5 years)</p>
-              
-                  <!-- Skill 1 -->  
+                <div class="skill-mf">
+                  <p class="title-s">Core Skills</p>
+
                   <div class="row mb-3">
                     <div class="col-md-8">
                         <span>Python (2.7 - 3.12)</span>
                     </div>
                     <div class="col-md-4 d-flex justify-content-end align-items-center">
-                        <i class="fa-brands fa-python me-2"></i>
+                        <i class="fa-brands fa-python me-2 skill-icon python-icon"></i>
                     </div>
                   </div>
                   <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
 
-                  <!-- Skill 2 -->
                   <div class="row mb-3">
                       <div class="col-md-8">
-                          <span>Flask Web-Framework</span>
+                          <span>Flask, FastAPI & WebSockets</span>
                       </div>
                       <div class="col-md-4 d-flex justify-content-end align-items-center">
                           <span class="icon flask-icon">
-                            <img src="assets/vendor/bootstrap-icons/flaskicon.svg" alt="WebSocket Icon" style="height: 30px;">
+                            <img src="assets/vendor/bootstrap-icons/flaskicon.svg" alt="Flask Icon" style="height: 22px;">
                         </span>
                       </div>
                   </div>
@@ -133,80 +159,44 @@
                       <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
 
-                  <!-- Skill 3 -->
                   <div class="row mb-3">
                     <div class="col-md-8">
-                        <span>Databases: SQL, T-SQL</span>
+                        <span>Databases: SQL / T-SQL</span>
                     </div>
                     <div class="col-md-4 d-flex justify-content-end align-items-center">
-                        <i class="fa-solid fa-database me-2"></i>
-                        <i class="fa-solid fa-seedling"></i>
+                        <i class="fa-solid fa-database me-2 skill-icon db-icon"></i>
+                        <img class="skill-svg" src="assets/img/T_SQL_icon.svg" alt="T-SQL icon" style="height: 25px; width: auto;">
                     </div>
                   </div>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
 
-                  <!-- Skill 4 --> 
                   <div class="row mb-3">
                     <div class="col-md-8">
-                        <span>Web languages (HTML & CSS3 & JS)</span>
+                        <span>Web tech: HTML, CSS & JavaScript</span>
                     </div>
                     <div class="col-md-4 d-flex justify-content-end align-items-center">
-                        <i class="fa-brands fa-html5 me-2"></i>
-                        <i class="fa-brands fa-css3-alt me-2"></i>
-                        <i class="fa-brands fa-js"></i>
+                        <i class="fa-brands fa-html5 me-2 skill-icon html-icon"></i>
+                        <i class="fa-brands fa-css3-alt me-2 skill-icon css-icon"></i>
+                        <i class="fa-brands fa-js skill-icon js-icon"></i>
                     </div>
                   </div>
                   <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
 
-                  <!-- Skill 4 -->
                   <div class="row mb-3">
                     <div class="col-md-8">
-                        <span>Linux Server knowledge</span>
+                        <span>Git, Linux & basic DevOps</span>
                     </div>
                     <div class="col-md-4 d-flex justify-content-end align-items-center">
-                        <i class="fa-brands fa-ubuntu me-2"></i>
-                        <i class="fa-solid fa-terminal"></i>
+                        <i class="bi bi-github me-2 skill-icon github-icon"></i>
+                        <i class="fa-brands fa-ubuntu me-2 skill-icon ubuntu-icon"></i>
                     </div>
                   </div>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-
-                  <!-- Skill 5 -->
-                  <div class="row mb-3">
-                    <div class="col-md-8">
-                        <span>Git & GitHub</span>
-                    </div>
-                    <div class="col-md-4 d-flex justify-content-end align-items-center">
-                        <i class="bi bi-github me-2"></i>
-                        <i class="bi bi-git"></i>
-                    </div>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-
-                  <!-- Skill 6 -->
-                  <!-- Skill 7 -->
-                  <div class="row mb-3">
-                    <div class="col-md-8">
-                        <span>Python WebSocket / FastAPI</span>
-                    </div>
-                    <div class="col-md-4 d-flex justify-content-end align-items-center">
-                        <span class="icon ws-icon">
-                            <img src="assets/vendor/bootstrap-icons/py_ws.svg" alt="WebSocket Icon" style="height: 20px;">
-                        </span>
-                        <span class="icon fastapi-icon">
-                            <img src="assets/vendor/bootstrap-icons/pyfastapi.svg" alt="WebSocket Icon" style="height: 20px;">                          
-                        </span>
-                    </div>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
 
                   <!-- Specialized Software Skills -->
@@ -218,8 +208,8 @@
                         <span>Vertec: CRM-Businesslogic, Vertec-SQL, OCL</span>
                     </div>
                     <div class="col-md-4 d-flex justify-content-end align-items-center">
-                        <i class="fa-solid fa-database me-2"></i>
-                        <i class="fa-solid fa-seedling me-2"></i>
+                        <i class="fa-solid fa-database me-2 skill-icon db-icon"></i>
+                        <i class="fa-solid fa-seedling me-2 skill-icon seedling-icon"></i>
                         <a href="http://vertec.com/de-ch/kb/" target="_blank" rel="noopener noreferrer" title="Visit the Vertec, knowledge base">
                           <img src="assets/img/vertec_icon_skills.png" style="height:1em;" />
                         </a>
@@ -235,7 +225,7 @@
                         <span>Abacus REST-API's mainly for Vertec | in Python</span>
                     </div>
                     <div class="col-md-4 d-flex justify-content-end align-items-center">
-                        <i class="fa-brands fa-python me-2"></i>
+                        <i class="fa-brands fa-python me-2 skill-icon python-icon"></i>
                         <a href="https://apihub.abacus.ch/" target="_blank" rel="noopener noreferrer" title="Visit the Abacus API hub">
                           <img src="assets/img/aba_icon_simple.gif" style="height:1em;" />
                         </a>
@@ -251,7 +241,7 @@
                         <span>Graph API (REST) mainly for Vertec | in Python</span>
                     </div>
                     <div class="col-md-4 d-flex justify-content-end align-items-center">
-                        <i class="fa-brands fa-python me-2"></i>
+                        <i class="fa-brands fa-python me-2 skill-icon python-icon"></i>
                         <a href="https://learn.microsoft.com/en-us/graph/use-the-api" target="_blank" rel="noopener noreferrer" title="Visit the MS Graph-API doc(s)">
                           <img src="assets/img/msgraph_api_icon.png" style="height:1em;" />
                         </a>
@@ -267,19 +257,17 @@
                         <span>MS Office & templates: Word, Excel, PowerPoint</span>
                     </div>
                     <div class="col-md-4 d-flex justify-content-end align-items-center">
-                        <i class="fa-solid fa-file-word me-2"></i>
-                        <i class="fa-solid fa-file-excel me-2"></i>
-                        <i class="fa-solid fa-file-powerpoint"></i>
+                        <i class="fa-solid fa-file-word me-2 skill-icon word-icon"></i>
+                        <i class="fa-solid fa-file-excel me-2 skill-icon excel-icon"></i>
+                        <i class="fa-solid fa-file-powerpoint skill-icon ppt-icon"></i>
                     </div>
                   </div>
                   <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
 
-                  <!-- Languages -->
-                  <p class="title-s">My Languages</p>
+                  <p class="title-s">Languages</p>
 
-                  <!-- German -->
                   <div class="row mb-3">
                     <div class="col-md-8">
                         <span>German (mother tongue)</span>
@@ -292,30 +280,16 @@
                     <div class="progress-bar progress-bar-red" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
 
-                  <!-- German -->
                   <div class="row mb-3">
                     <div class="col-md-8">
-                        <span>English (about B2 - C1)</span>
+                        <span>English (B2 - C1)</span>
                     </div>
                     <div class="col-md-4 d-flex justify-content-end align-items-center">
                         <i class="fa-solid fa-language"></i>
                     </div>
                   </div>
                   <div class="progress">
-                    <div class="progress-bar progress-bar-red" role="progressbar" style="width: 70%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-
-                  <!-- German -->
-                  <div class="row mb-3">
-                    <div class="col-md-8">
-                        <span>French (second mother tongue)</span>
-                    </div>
-                    <div class="col-md-4 d-flex justify-content-end align-items-center">
-                        <i class="fa-solid fa-language"></i>
-                    </div>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-red" role="progressbar" style="width: 80%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar progress-bar-red" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   
                   </div><!-- END skills -->
@@ -325,11 +299,11 @@
                       <div class="title-box-2">
                         <h5 class="title-left">
                           About Me
-                      </h5>
+                        </h5>
                       </div>
                       <p class="lead">
                         <strong>Introduction to My Journey<br></strong>
-                        Welcome to my corner of the web! I crafted this custom website during my spare moments while apprenticing at the Bénédict School in Zurich Altstetten. As I type these lines of code, I find myself immersed in my apprenticeship journey as a aspiring software developer.
+                        Welcome to my corner of the web! I started crafting this custom website during my spare moments while apprenticing at the Bénédict School in Zurich Altstetten. As I type these lines of code, I find myself immersed in my apprenticeship journey as a aspiring software developer.
                       </p>
                       <p class="lead">
                         <strong>Passion for Technology & Software<br></strong>
@@ -337,7 +311,7 @@
                       </p>
                       <p class="lead">
                         <strong>Ubuntu Server Knowledge<br></strong>
-                        Currently, I host my own <strong><a href="https://www.getmonero.org/get-started/contributing/" target="_blank" rel="noopener noreferrer">Monero Node</a></strong> as well as a <strong><a href="https://runonflux.io/nodes" target="_blank" rel="noopener noreferrer">FluxNode</a></strong> which brings in approximately 15% APY. I also started crypto mining back in early 2021 with Nvidia GPUs. However, when Ethereum switched to Proof of Stake in late 2022 (PoS), profitability significantly decreased, and high electricity prices made it impractical for me to continue mining. As a result, I decided to sell my GPUs and install and invest a FluxNode, which has been a good  decision so far. Consequently, I learned a lot about Ubuntu Server (20.04 LTS) and also how to host websites with nginx or a Python script for a Telegram bot.
+                        Currently, I host my own <strong><a href="https://www.getmonero.org/get-started/contributing/" target="_blank" rel="noopener noreferrer">Monero Node</a></strong> as well as a <strong><a href="https://runonflux.io/nodes" target="_blank" rel="noopener noreferrer">FluxNode</a></strong> (Terminated in 2026) which brings in approximately 15% APY. I also started crypto mining back in early 2021 with Nvidia GPUs. However, when Ethereum switched to Proof of Stake in late 2022 (PoS), profitability significantly decreased, and high electricity prices made it impractical for me to continue mining. As a result, I decided to sell my GPUs and install and invest a FluxNode, which has been a good  decision so far. Consequently, I learned a lot about Ubuntu Server (20.04 LTS) and also how to host websites with nginx or a Python script for a Telegram bot.
                       </p>
                     
                     </div>
@@ -395,62 +369,62 @@
             </div>
           </div>-->
 
-          <div class="col-md-4"><!-- Section 1 -->
+          <div class="col-md-4"><!-- Section 1: 50% Job -->
             <div class="service-box service-box-bg-custom">
-              <h2 class="s-title text-white">Internship at Spektra Netcom
-                <span class="subtitle">ICT Support / Python + IPA</span>
+              <h2 class="s-title text-white">Junior API Developer
+                <span class="subtitle">Spektra Netcom AG</span>
               </h2>
-          
+
               <span class="s-description text-center text-white">
-                <span class="bi bi-translate"></span> <strong>Praktikum bei Spektra Netcom AG</strong>
+                <span class="bi bi-translate"></span> <strong>Junior API-Entwickler bei Spektra Netcom AG</strong>
               </span>
-          
+
               <div class="service-ico text-white">
                 <span class="ico-circle"><i class="fa-brands fa-python"></i></span>
               </div>
-          
+
               <div class="service-content">
-                <h2 class="s-title text-white">2-year Trainee for IPA</h2>
+                <h2 class="s-title text-white">50% job, following my 4-year apprenticeship</h2>
                 <p class="s-description text-center text-white">
-                  As part of my apprenticeship at Bénédict, I am doing a 2-year internship to gain practical experience.  
-                    At <a href="https://www.spektra.ch/" target="_blank" rel="noopener noreferrer" class="career-link">Spektra</a>, we customize <a href="https://www.vertec.com" target="_blank" rel="noopener noreferrer" class="career-link">Vertec</a> using Python with <a href="https://en.wikipedia.org/wiki/Object_Constraint_Language" target="_blank" rel="noopener noreferrer" class="career-link">OCL</a> for 500+ companies.  
-                  I also work with various APIs like <a href="https://learn.microsoft.com/en-us/graph/use-the-api" target="_blank" rel="noopener noreferrer" class="career-link">Microsoft Graph</a>, Abacus, and COM interfaces.  
-                  Customer support is part of my daily tasks. We create and customize Word and Excel templates with Python for Vertec CRM.
+                  During my 2-year internship at
+                  <a href="https://www.spektra.ch/" target="_blank" rel="noopener noreferrer" class="career-link">Spektra</a>,
+                  I customized <a href="https://www.vertec.com" target="_blank" rel="noopener noreferrer" class="career-link">Vertec</a>
+                  with Python and <a href="https://en.wikipedia.org/wiki/Object_Constraint_Language" target="_blank" rel="noopener noreferrer" class="career-link">OCL</a>,
+                  worked with APIs like Microsoft Graph and Abacus, and handled customer support and Word/Excel template customization for Vertec CRM.
+                  After completing the IPA and my EFZ there, I decided to stay on and continue working 50% in this role.
                 </p>
                 <p class="s-description text-center text-white">
-                  Our team keeps Vertec running smoothly and ensures customer satisfaction.  
-                  I will also complete the Individual Practical Work (IPA) here to earn my EFZ certificate.
+                  <span class="bi bi-calendar2-week"></span> <strong>September 2026 – ongoing</strong>
                 </p>
-                <p class="s-description text-center text-white">
-                  <span class="bi bi-calendar2-week"></span> <strong>August 2024 – July 2026</strong>
-                </p>
-                <a href="assets/documents/EFZ_2026_Bene_secure.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">EFZ certificate (DE)</a>
+                <a href="assets/documents/spektra_interimreport.pdf" class="btn btn-primary disabled" title="No document available atm" onclick="return false;">No document available atm</a>
+                <!--<a href="assets/documents/spektra_interimreport.pdf" class="btn btn-primary" title="Spektra Interim report">TODO: Interim report (DE)</a>-->
               </div>
             </div>
           </div>
 
-          <div class="col-md-4"><!-- Section 2 -->
-            <div class="service-box service-box-bg-custom"><!-- custom bg -->
+          <div class="col-md-4"><!-- Section 2: 4-year EFZ apprenticeship -->
+            <div class="service-box service-box-bg-custom">
               <h2 class="s-title text-white">Computer Scientist,
                 <span class="subtitle">specializing in application development</span>
               </h2>
-              <!-- br tags -->
+
               <span class="s-description text-center text-white">
                 <span class="bi bi-translate"></span> <strong>Informatiker EFZ, Applikationsentwickler</strong>
               </span>
+
               <div class="service-ico">
-                  <span class="ico-circle text-white"><i class="bi bi-code-square"></i></span>
+                <span class="ico-circle text-white"><i class="bi bi-code-square"></i></span>
               </div>
+
               <div class="service-content">
-                  <h2 class="s-title text-white">100% apprenticeship</h2>
-                  <p class="s-description text-center text-white"><!-- 10/10 Text, approved -->
-                    After my certification as a mechanical technician (Mechanikpraktiker EBA, Q2 2021), I could have continued my career as an Automatikmonteur EFZ, but I had some doubts. I discovered my passion for IT during my first apprenticeship. Starting as a part-time catalog manager a few months after completing my EBA confirmed my decision to become a computer scientist and continue my education. Therefore, I chose Bénédict school in Zurich Altstetten. Right from the start I was enthusiastic about the IT world.  
-                  </p>
-                  <p class="s-description text-center text-white">
-                    <span class="bi bi-calendar2-week"></span> <strong>August 2022 - July 2026</strong>
-                  </p>
-                  <!-- Link zm aktuellen Noten-Zeugnis -->
-                  <a href="assets/documents/6_He25_Redacted.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">current school grades (DE)</a>
+                <h2 class="s-title text-white">4-year apprenticeship (Bénédict & Spektra Netcom AG)</h2>
+                <p class="s-description text-center text-white">
+                  After my certification as a mechanical technician (Mechanikpraktiker EBA, Q2 2021), I discovered my passion for IT during a part-time job as catalog manager. This confirmed my decision to become a computer scientist, so I started my 4-year apprenticeship at Bénédict school in Zurich Altstetten, combined with a 2-year practical internship from August 2024 - July 2026<br> at Spektra Netcom AG.
+                </p>
+                <p class="s-description text-center text-white">
+                  <span class="bi bi-calendar2-week"></span> <strong>August 2022 – July 2026</strong>
+                </p>
+                <a href="assets/documents/EFZ_2026_Bene_secure.pdf" class="btn btn-primary" title="Open the EFZ certificate">Informatiker EFZ certificate (DE)</a>
               </div>
             </div>
           </div>
@@ -475,7 +449,7 @@
                 <p class="s-description text-center text-white">
                   <span class="bi bi-calendar2-week"></span> <strong>November 2021 - ongoing</strong>
                 </p>
-                <a href="assets/documents/Zwischenzeugnis-Octosoft-NJ_secure.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Interim report (DE)</a>
+                <a href="assets/documents/Zwischenzeugnis-Octosoft-NJ_secure.pdf" class="btn btn-primary" title="Open the interim report">2023 Interim report (DE)</a>
               </div>
             </div>
           </div>
@@ -500,7 +474,7 @@
                 <p class="s-description text-center text-white">
                   <span class="bi bi-calendar2-week"></span> <strong>February 2021 - May 2021</strong>
                 </p>
-                <a href="assets/documents/EBA_und_MPA_2021_BBI_secure.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">EBA certificate + Apprenticeship report (DE)</a>
+                <a href="assets/documents/EBA_und_MPA_2021_BBI_secure.pdf" class="btn btn-primary" title="Open the EBA certificate and apprenticeship report">EBA certificate + Apprenticeship report (DE)</a>
               </div>
             </div>
           </div>
@@ -518,14 +492,14 @@
                   <span class="ico-circle"><i class="bi bi-tools"></i></span>
               </div>
               <div class="service-content">
-                <h2 class="s-title text-white">100% apprenticeship</h2>
+                <h2 class="s-title text-white">3-Year apprenticeship</h2>
                 <p class="s-description text-center text-white">
                   Following secondary school, I encountered challenges in securing a fitting apprenticeship. Eventually, I was granted a valuable opportunity: a three-year apprenticeship as a mechanical technician EBA, specializing in Electrical Assembly & Connection Technology at BBI in Zurich Altstetten. Immersed in an electronics workshop, I delved into the intricacies of cables, electricity, strands, and sockets, spanning from floor sockets of type T13 to industrial sockets of type T25, boasting 450 volts and 3 phases.
                 </p>   
                 <p class="s-description text-center text-white">
                   <span class="bi bi-calendar2-week"></span> <strong>August 2018 - July 2021</strong>
                 </p>
-                <a href="assets/documents/LehrZeugnis_BBI_NJ_secure.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">QV report (DE)</a>
+                <a href="assets/documents/LehrZeugnis_BBI_NJ_secure.pdf" class="btn btn-primary" title="Open the QV report">QV report (DE)</a>
               </div>
             </div>
           </div>
@@ -950,6 +924,52 @@
         </div>
       </div>
     </section><!-- End Blog Section -->
+
+    <!-- ======= Downloads Section ======= -->
+    <section id="downloads" class="downloads-section pt-4 pb-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="downloads-hero text-center">
+              <h3 class="title-a text-white mb-2">Downloads</h3>
+              <p class="subtitle-a text-white mb-0">
+              
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3 mt-1 justify-content-center">
+          <div class="col-lg-5">
+            <div class="download-card">
+              <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+                <div>
+                  <h5 class="text-white mb-1">Curriculum Vitae</h5>
+                  <p class="mb-0 text-white-50 small">Due to data privacy concerns, my CV is only available upon request.</p>
+                </div>
+                <a href="assets/documents/none_docs.pdf" class="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-solid fa-file-pdf me-2"></i>Open pdf
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="download-card">
+              <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+                <div>
+                  <h5 class="text-white mb-1">Final School grades at Bénédict</h5>
+                  <p class="mb-0 text-white-50 small">For the 4 year apprenticeship as Informatiker EFZ </p>
+                </div>
+                <a href="assets/documents/6_He25_Redacted.pdf" class="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-solid fa-file-pdf me-2"></i>2026 Final School grades
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/contactBg.png)">
